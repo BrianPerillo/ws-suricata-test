@@ -1,0 +1,21 @@
+<html>
+
+<body>
+
+    <script type="text/javascript">
+        // Then some JavaScript in the browser:
+
+        /*var chat = new WebSocket('ws://localhost:8080/chat');
+        chat.onmessage = (e) => { console.log(e.data); };
+        chat.onopen = (e) => { chat.send('Chat!'); };
+        chat.onerror = (e) => { console.log(e); };*/
+
+        var conn = new WebSocket('ws://localhost:8080/echo');
+        conn.onmessage = (e) => { console.log(e.data); };
+        conn.onopen = (e) => { conn.send('Hola!'); };
+        conn.onerror = (e) => { console.log(e); };
+    </script>
+
+</body>
+
+</html>
